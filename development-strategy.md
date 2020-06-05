@@ -14,3 +14,10 @@
 - The file `./api/tracks/controller.js` add the functionalities to process incoming HTTP requests and execute the CRUD operation.
 
 ---
+
+## 2. User Story: `CRUD operations for all tables`
+
+- User must be able to perform any CRUD operation to the SQLite database using REST  API commands, the server must process the request and give back a response and status "ok" or and status "error" with a message.
+- The files `./api/:table/controller.js` add the functionalities to process incoming HTTP requests and execute the CRUD operation where `:table` is the table name.
+
+---
