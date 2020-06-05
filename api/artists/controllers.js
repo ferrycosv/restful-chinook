@@ -17,8 +17,12 @@ const controllers = {
       `SELECT * FROM ${table} where ${primary_key}=?`,
       req.params.id,
       (err, rows) => {
-        if (err) {
-          res.status(400).json({ error: err.message });
+        if (err || !rows) {
+          res
+            .status(400)
+            .json({
+              error: !rows ? `id: ${req.params.id} not found!` : err.message,
+            });
           return;
         }
         res.json(rows);
