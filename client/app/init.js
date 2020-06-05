@@ -3,7 +3,7 @@ fetch('/api')
   .then(data => {
     console.log(data)
     document.getElementById('root')
-      .innerHTML = data.message;
+      .innerHTML = data;
   })
   .catch(err => console.error(err));
 
