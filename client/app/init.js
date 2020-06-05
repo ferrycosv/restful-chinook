@@ -1,5 +1,5 @@
 fetch('/api')
-  .then(res => res.json())
+  .then(res => res.text())
   .then(data => {
     console.log(data)
     document.getElementById('root')
